@@ -1,0 +1,33 @@
+{
+  "name": "refreshable",
+  "version": "0.0.1",
+  "description": "a pull to refresh component for vue",
+  "config": {
+    "libName": "refreshable"
+  },
+  "keywords": [
+    "refreshable",
+    "vue",
+    "refresh",
+    "pull to refresh",
+    "pull down",
+    "pull up"
+  ],
+  "author": "litt1e-p",
+  "license": "MIT",
+  "main": "dist/refreshable.umd.js",
+  "module": "dist/refreshable.esm.js",
+  "unpkg": "dist/refreshable.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litt1e-p/refreshable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/litt1e-p/refreshable/issues"
+  },
+  "homepage": "https://github.com/litt1e-p/refreshable#readme",
+  "dependencies": {
+    "vue": "^2.6.11",
+    "better-scroll": "^2.0.0-beta.10"
+  }
+}
