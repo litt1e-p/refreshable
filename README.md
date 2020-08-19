@@ -59,20 +59,20 @@ components: {
 ```
 3. closure funcs
 
-3.1 endpoint
+- 3.1 endpoint
 
 ```js
 this.$refs.refreshable.endPullDown() // for pull down event
 this.$refs.refreshable.endPullUp(hasMore: Boolean) // for pull up event
 ```
 
-3.2 layout recalculate
+- 3.2 layout recalculate
 
 ```js
 this.$refs.refreshable.setNeedsLayout()
 ```
 
-3.3 auto refresh
+- 3.3 auto refresh
 ```js
 this.$refs.refreshable.autoRefresh()
 ```
