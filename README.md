@@ -1,4 +1,4 @@
-# refreshable-lib
+# Refreshable
 
 a pull to refresh component for vue
 
@@ -19,6 +19,7 @@ Vue.use(Refreshable)
 2. partially
 ```js
 import { Refreshable } from 'refreshable'
+import 'refreshable/dist/assets/refreshable.css'
 
 <script>
 components: {
@@ -46,10 +47,12 @@ components: {
               loading: 'loading for u',
               normal: 'pull to refresh',
               done: 'done'
-            }
+            },
+            imgType: 'default' // spinner/circular
           }" :pullup="{
             threshold: 10,
-            text: { loading: 'loading', done: 'done', normal: 'pull up and load more', noMore: 'all loaded' }
+            text: { loading: 'loading', done: 'done', normal: 'pull up and load more', noMore: 'all loaded' },
+            imgType: 'default' // spinner/circular
           }" @pullingUp="doPullup" @pullingDown="doPulldown">
   // your html      
 </refreshable>
@@ -76,4 +79,4 @@ this.$refs.refreshable.autoRefresh()
 
 ## Notice
 
-> your `fixed` component or dom element will be not effect when wrapped in `<refreshable>` cause of the dependency of the lib is base on `transform`. therefore, your should place all `fixed` out of the wrapper.
+> your `fixed` component or dom element will not effects when wrapped in `<refreshable>` cause of the dependency of the lib is base on `transform`. therefore, your should place all `fixed` elements out of the wrapper.
