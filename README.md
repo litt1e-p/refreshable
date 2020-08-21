@@ -1,5 +1,9 @@
 # Refreshable
 
+[![npm](https://img.shields.io/npm/v/refreshable?color=green)]((https://www.npmjs.com/package/refreshable))
+[![npm](https://img.shields.io/npm/dm/refreshable.svg)](https://www.npmjs.com/package/refreshable)
+[![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+
 a pull to refresh component for vue
 
 ## Installation
