@@ -48,11 +48,11 @@ components: {
               normal: 'pull to refresh',
               done: 'done'
             },
-            imgType: 'default' // spinner/circular
+            img: 'random' // spinner/circular/dots/random(default)
           }" :pullup="{
             threshold: 10,
             text: { loading: 'loading', done: 'done', normal: 'pull up and load more', noMore: 'all loaded' },
-            imgType: 'default' // spinner/circular
+            img: 'circular' // spinner/circular/dots/random(default)
           }" @pullingUp="doPullup" @pullingDown="doPulldown">
   // your html      
 </refreshable>
