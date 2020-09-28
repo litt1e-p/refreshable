@@ -1,6 +1,6 @@
 {
   "name": "refreshable",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "a pull to refresh component for vue",
   "config": {
     "libName": "refreshable"
