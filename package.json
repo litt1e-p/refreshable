@@ -1,6 +1,6 @@
 {
   "name": "refreshable",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "a pull to refresh component for vue",
   "config": {
     "libName": "refreshable"
@@ -38,6 +38,6 @@
     "@better-scroll/wheel": "^2.0.5",
     "@better-scroll/zoom": "^2.0.5",
     "activity-indicator": "^0.0.3",
-    "vue": "^2.6.11"
+    "vue": "^2.6.12"
   }
 }
