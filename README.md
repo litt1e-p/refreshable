@@ -6,6 +6,7 @@
 
 a pull to refresh component for vue
 
+![refreshable.gif](./screenshots/refreshable.gif)
 ## Installation
 
 ```js
