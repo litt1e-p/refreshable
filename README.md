@@ -4,13 +4,13 @@
 [![npm](https://img.shields.io/npm/dm/refreshable.svg)](https://www.npmjs.com/package/refreshable)
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 
-a pull to refresh component for vue
+a pull to refresh component for vue 3.x
 
 ![refreshable.gif](./screenshots/refreshable.gif)
 ## Installation
 
 ```js
-npm i refreshable
+npm i refreshable@next
 ```
 
 1. globally
@@ -18,20 +18,32 @@ npm i refreshable
 import Refreshable from 'refreshable'
 import 'refreshable/dist/assets/refreshable.css'
 
-Vue.use(Refreshable)
+createApp(App)
+  .use(Refreshable)
+  .mount('#app')
 ```
 
 2. partially
 ```js
+
+<script setup>
+import { Refreshable } from 'refreshable'
+import 'refreshable/dist/assets/refreshable.css'
+</script>
+
+// or defineComponent
+<script>
+
+import { defineComponent } from 'vue'
 import { Refreshable } from 'refreshable'
 import 'refreshable/dist/assets/refreshable.css'
 
-<script>
-components: {
-  Refreshable
-}
+export default defineComponent({
+  components: {
+    Refreshable
+  }
+})
 </script>
-
 ```
 
 ## Usage
