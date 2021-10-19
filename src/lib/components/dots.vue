@@ -30,16 +30,20 @@
 </template>
 
 <script>
-
 export default {
-  name: 'dots',
-  props: {
-    tintColor: {
-      type: String,
-      default: () => '#aaaaaa'
-    }
-  }
+  name: 'dots'
 }
+</script>
+
+<script setup>
+
+defineProps({
+  tintColor: {
+    type: String,
+    required: false,
+    default: '#aaaaaa'
+  }
+})
 
 </script>
 

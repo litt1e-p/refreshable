@@ -1,4 +1,4 @@
-import Refreshable from './lib'
+import Refreshable from './lib/index.vue'
 
 const components = [Refreshable]
 

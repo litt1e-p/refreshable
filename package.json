@@ -1,6 +1,6 @@
 {
   "name": "refreshable",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "a pull to refresh component for vue",
   "config": {
     "libName": "refreshable"
@@ -18,12 +18,6 @@
   "main": "./dist/refreshable.umd.js",
   "module": "./dist/refreshable.es.js",
   "unpkg": "./dist/refreshable.iife.js",
-  "exports": {
-    ".": {
-      "import": "./dist/refreshable.es.js",
-      "require": "./dist/refreshable.umd.js"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/litt1e-p/refreshable.git"

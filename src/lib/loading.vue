@@ -1,77 +1,67 @@
 <template>
   <div class="mf-loading-container">
-    <span :class="{ 'mr': type === 'default' }">{{text}}</span>
+    <span :class="{ 'mr': props.type === 'default' }">{{props.text}}</span>
     <!-- <img :src="require(`./assets/img/${svg}.svg`)" alt=""> -->
-    <component :is="svg"></component>
+    <component :is="svgView"></component>
   </div>
 </template>
 
-<script>
+<script setup>
 
-import circular from './components/circular'
-import spinner from './components/spinner'
-import dots from './components/dots'
+import { reactive, computed, watch, defineAsyncComponent } from 'vue'
 
-export default {
-  name: 'loading',
-  components: {
-    circular,
-    spinner,
-    dots
+const svgView = computed(() => defineAsyncComponent(() => import(`./components/${state.svg}.vue`)))
+
+const props = defineProps({
+  value: {
+    type: Boolean,
+    default: false
   },
-  props: {
-    value: {
-      type: Boolean,
-      default: false
-    },
-    text: {
-      type: String,
-      default: 'loading'
-    },
-    type: {
-      type: String,
-      default: 'random' // circular spinner dots
-    }
+  text: {
+    type: String,
+    default: 'loading'
   },
-  data () {
-    return {
-      ops: ['circular', 'spinner', 'dots'],
-      svg: 'dots'
-    }
-  },
-  methods: {
-    strategy (v) {
-      if (this.ops.includes(v)) {
-        this.svg = v
-      } else {
-        this.svg = this.random()
-      }
-    },
-    random () {
-      return this.ops[Math.round(Math.random() * 2)]
-    },
-    toggle () {
-      if (this.ops.includes(this.type)) {
-        return
-      }
-      this.svg = this.random()
-    }
-  },
-  watch: {
-    type: {
-      handler (v) {
-        this.strategy(v)
-      },
-      immediate: true
-    },
-    value: {
-      handler (v) {
-        v && this.toggle()
-      },
-      immediate: true
-    }
+  type: {
+    type: String,
+    default: 'random'
   }
+})
+
+const state = reactive({
+  ops: ['circular', 'spinner', 'dots'],
+  svg: 'dots'
+})
+
+const strategy = v => {
+  let t = void 0
+  if (state.ops.includes(v)) {
+    t = v
+  } else {
+    t = random()
+  }
+  state.svg = t
+  return t
 }
+
+const random = () => {
+  return state.ops[Math.round(Math.random() * 2)]
+}
+
+const toggle = () => {
+  if (state.ops.includes(state.type)) {
+    return
+  }
+  state.svg = state.random()
+}
+
+watch(() => props.type, (v, o) => {
+  strategy(v)
+}, { immediate: true })
+
+watch(() => props.value, v => {
+  v && toggle(v)
+}, { immediate: true })
+
 </script>
 
 <style lang="scss">

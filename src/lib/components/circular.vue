@@ -9,16 +9,20 @@
 </template>
 
 <script>
-
 export default {
-  name: 'circular',
-  props: {
-    tintColor: {
-      type: String,
-      default: () => '#aaaaaa'
-    }
-  }
+  name: 'circular'
 }
+</script>
+
+<script setup>
+
+defineProps({
+  tintColor: {
+    type: String,
+    required: false,
+    default: '#aaaaaa'
+  }
+})
 
 </script>
 

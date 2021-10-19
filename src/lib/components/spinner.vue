@@ -67,16 +67,20 @@
 </template>
 
 <script>
-
 export default {
-  name: 'spinner',
-  props: {
-    tintColor: {
-      type: String,
-      default: () => '#aaaaaa'
-    }
-  }
+  name: 'spinner'
 }
+</script>
+
+<script setup>
+
+defineProps({
+  tintColor: {
+    type: String,
+    required: false,
+    default: '#aaaaaa'
+  }
+})
 
 </script>
 
