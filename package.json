@@ -1,6 +1,6 @@
 {
   "name": "refreshable",
-  "version": "0.2.7",
+  "version": "3.0.0",
   "description": "a pull to refresh component for vue",
   "config": {
     "libName": "refreshable"
@@ -15,9 +15,15 @@
   ],
   "author": "litt1e-p",
   "license": "MIT",
-  "main": "dist/refreshable.umd.js",
-  "module": "dist/refreshable.esm.js",
-  "unpkg": "dist/refreshable.min.js",
+  "main": "./dist/refreshable.umd.js",
+  "module": "./dist/refreshable.es.js",
+  "unpkg": "./dist/refreshable.iife.js",
+  "exports": {
+    ".": {
+      "import": "./dist/refreshable.es.js",
+      "require": "./dist/refreshable.umd.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/litt1e-p/refreshable.git"
@@ -37,7 +43,9 @@
     "@better-scroll/slide": "^2.4.2",
     "@better-scroll/wheel": "^2.4.2",
     "@better-scroll/zoom": "^2.4.2",
-    "activity-indicator": "^0.0.3",
-    "vue": "^2.6.14"
+    "activity-indicator": "^3.0.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.20"
   }
 }
