@@ -1,6 +1,6 @@
 {
   "name": "refreshable",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "a pull to refresh component for vue",
   "config": {
     "libName": "refreshable"
@@ -40,6 +40,6 @@
     "activity-indicator": "^3.0.1"
   },
   "peerDependencies": {
-    "vue": "^3.2.20"
+    "vue": "^3.2.23"
   }
 }

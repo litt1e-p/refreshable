@@ -1970,7 +1970,7 @@ var Ko = Xo(Object.assign(Wo, { props: { probeType: { type: Number, default: 1 }
     B2 && g(() => $2(t2));
   }, endPullDown: () => {
     B2 && g(() => G2());
-  } }), (t2, e3) => (i(), r("div", _o, [c2.direction === "vertical" ? (i(), r("div", { key: 0, ref: (t3, e4) => {
+  }, resumePullup: Z2 }), (t2, e3) => (i(), r("div", _o, [c2.direction === "vertical" ? (i(), r("div", { key: 0, ref: (t3, e4) => {
     e4.sw1 = t3, P2.value = t3;
   }, class: "rfa__wr", style: { position: "absolute", left: "0", top: "0", right: "0", bottom: "0", overflow: "hidden" } }, [s("div", Ao, [k(t2.$slots, "pulldown", { dto: { isPullingdown: u(C2).isPullingdown, isPullingdownDone: u(C2).isPullingdownDone, indPer: u(C2).indPer } }, () => [c2.pulldown ? (i(), r("div", { key: 0, class: a(["rfa__pulldown-wr", { "rfa__pulldown-wr-ing": u(C2).isPullingdown }]) }, [u(C2).isPullingdown ? d("", true) : (i(), r("div", No, [s("span", null, l(u(H2)), 1)])), s("div", Fo, [w(T(qe, { text: u(H2), type: c2.pulldown.img, modelValue: u(C2).isPullingdown, "onUpdate:modelValue": e3[0] || (e3[0] = (t3) => u(C2).isPullingdown = t3) }, null, 8, ["text", "type", "modelValue"]), [[b, !u(z2) && u(C2).isPullingdown]]), w(T(u(Yo), { class: "rfa__ind rfa__ind_mn", ref: (t3, e4) => {
     e4.ind = t3, M2.value = t3;
@@ -1981,7 +1981,7 @@ var Ko = Xo(Object.assign(Wo, { props: { probeType: { type: Number, default: 1 }
   }, class: "rfah__wr" }, [s("div", Uo, [s("div", { ref: (t3, e4) => {
     e4.slot2 = t3, D2.value = t3;
   }, style: { "white-space": "nowrap", overflow: "hidden" } }, [k(t2.$slots, "default", {}, void 0, true)], 512)])], 512)) : d("", true)]));
-} }), [["__scopeId", "data-v-1e0d4096"]]);
+} }), [["__scopeId", "data-v-0fb52320"]]);
 const Vo = [Ko], qo = function(t2) {
   Vo.forEach((e2) => {
     t2.component(e2.name, e2);
