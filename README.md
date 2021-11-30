@@ -82,6 +82,11 @@ this.$refs.refreshable.setNeedsLayout()
 this.$refs.refreshable.autoRefresh()
 ```
 
+- 3.4 resume pullUp
+```js
+this.$refs.refreshable.resumePullUp()
+```
+
 ## Notice
 
 > your `fixed` component or dom element will not effects when wrapped in `<refreshable>` cause of the dependency of the lib is base on `transform`. therefore, your should place all `fixed` elements out of the wrapper.
