@@ -93,6 +93,10 @@ this.$refs.refreshable.setNeedsLayout()
 ```js
 this.$refs.refreshable.autoRefresh()
 ```
+- 3.4 resume pullUp
+```js
+this.$refs.refreshable.resumePullUp()
+```
 
 ## Notice
 
